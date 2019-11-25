@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Muadzin</string>
+    <string name="city_search">Cari Kota</string>
+    <string name="city_search_hint">Masukkan nama kota…</string>
+    <string name="choose_city">Pilih Kota</string>
 </resources>
