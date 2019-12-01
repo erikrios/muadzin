@@ -3,4 +3,13 @@
     <string name="city_search">Cari Kota</string>
     <string name="city_search_hint">Masukkan nama kota…</string>
     <string name="choose_city">Pilih Kota</string>
+    <string name="main_header_description">The Mosque In Moscow, Rusia</string>
+    <string name="subuh">Subuh</string>
+    <string name="terbit">Terbit</string>
+    <string name="dhuha">Dhuha</string>
+    <string name="zuhur">Zuhur</string>
+    <string name="asar">Asar</string>
+    <string name="magrib">Magrib</string>
+    <string name="isya">Isya</string>
+    <string name="imsak">Imsak</string>
 </resources>
