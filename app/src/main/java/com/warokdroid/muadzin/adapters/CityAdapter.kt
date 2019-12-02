@@ -1,15 +1,16 @@
 package com.warokdroid.muadzin.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.warokdroid.muadzin.R
+import com.warokdroid.muadzin.activities.PrayerTimesDetailsActivity
 import com.warokdroid.muadzin.models.City
 
 
@@ -31,7 +32,9 @@ class CityAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItems(cities[position]) {
-            Toast.makeText(context, "${it.name} clicked!", Toast.LENGTH_SHORT).show()
+            val dataIntent = Intent(context, PrayerTimesDetailsActivity::class.java)
+            dataIntent.putExtra(PrayerTimesDetailsActivity.DATA_CITY_KEY, it)
+            context.startActivity(dataIntent)
         }
     }
 
