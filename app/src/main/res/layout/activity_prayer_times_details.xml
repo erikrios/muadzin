@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_main_header"
-        tools:text="Jadwal Sholat Aceh Barat Daya" />
+        tools:text="@string/city_name_title" />
 
     <LinearLayout
         android:id="@+id/ll_content"

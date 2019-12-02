@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.warokdroid.muadzin.R
 import com.warokdroid.muadzin.activities.PrayerTimesDetailsActivity
 import com.warokdroid.muadzin.models.City
+import org.apache.commons.text.WordUtils
 
 
 class CityAdapter(
@@ -49,7 +50,7 @@ class CityAdapter(
         ) {
 
             tvCityFirstLetter.text = city.name?.first().toString()
-            tvName.text = city.name?.toLowerCase()?.capitalize()
+            tvName.text = WordUtils.capitalizeFully(city.name)
 
             itemView.setOnClickListener { listener(city) }
         }

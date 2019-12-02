@@ -12,4 +12,5 @@
     <string name="magrib">Magrib</string>
     <string name="isya">Isya</string>
     <string name="imsak">Imsak</string>
+    <string name="city_name_title">Jadwal Sholat %s</string>
 </resources>
