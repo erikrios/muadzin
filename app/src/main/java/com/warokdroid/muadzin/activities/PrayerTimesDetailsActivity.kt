@@ -3,10 +3,12 @@ package com.warokdroid.muadzin.activities
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
+import com.warokdroid.muadzin.NextPrayerTimesFragment
 import com.warokdroid.muadzin.R
 import com.warokdroid.muadzin.apis.ApiRepository
 import com.warokdroid.muadzin.models.City
@@ -36,6 +38,7 @@ class PrayerTimesDetailsActivity : AppCompatActivity(), PrayerTimeMainView {
     private lateinit var tvNextDateSix: TextView
     private lateinit var tvNextDateSeven: TextView
     private lateinit var progressBar: ProgressBar
+    private lateinit var frameLayoutItemOne: FrameLayout
 
     private var prayerTime: DataPrayerTime = DataPrayerTime(null, null)
     private lateinit var city: City
@@ -100,10 +103,18 @@ class PrayerTimesDetailsActivity : AppCompatActivity(), PrayerTimeMainView {
         tvNextDateSix = findViewById(R.id.tv_next_date_six)
         tvNextDateSeven = findViewById(R.id.tv_next_date_seven)
         progressBar = findViewById(R.id.progress_bar)
+        frameLayoutItemOne = findViewById(R.id.fl_item_one)
+        frameLayoutItemOne.setOnClickListener {
+            val fragmentManager = supportFragmentManager
+            val dialogFragment = NextPrayerTimesFragment()
+            dialogFragment.show(fragmentManager, null)
+
+        }
     }
 
     private fun bindViews() {
-        tvCityNameTitle.text = getString(R.string.city_name_title, WordUtils.capitalizeFully(city.name))
+        tvCityNameTitle.text =
+            getString(R.string.city_name_title, WordUtils.capitalizeFully(city.name))
         tvDateToday.text = prayerTime.data?.date
         tvSubuhTime.text = prayerTime.data?.subuh
         tvTerbitTime.text = prayerTime.data?.terbit

@@ -252,9 +252,12 @@
                 tools:ignore="NestedWeights">
 
                 <FrameLayout
+                    android:id="@+id/fl_item_one"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         style="@style/ImageBackgroundNextPrayerTimeStyle"
