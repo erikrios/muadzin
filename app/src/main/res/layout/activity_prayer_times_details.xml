@@ -277,9 +277,12 @@
                 </FrameLayout>
 
                 <FrameLayout
+                    android:id="@+id/fl_item_two"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         style="@style/ImageBackgroundNextPrayerTimeStyle"
@@ -299,9 +302,12 @@
                 </FrameLayout>
 
                 <FrameLayout
+                    android:id="@+id/fl_item_three"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         style="@style/ImageBackgroundNextPrayerTimeStyle"
@@ -331,9 +337,12 @@
                 android:weightSum="3">
 
                 <FrameLayout
+                    android:id="@+id/fl_item_four"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         style="@style/ImageBackgroundNextPrayerTimeStyle"
@@ -353,9 +362,12 @@
                 </FrameLayout>
 
                 <FrameLayout
+                    android:id="@+id/fl_item_five"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         style="@style/ImageBackgroundNextPrayerTimeStyle"
@@ -375,9 +387,12 @@
                 </FrameLayout>
 
                 <FrameLayout
+                    android:id="@+id/fl_item_six"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         style="@style/ImageBackgroundNextPrayerTimeStyle"

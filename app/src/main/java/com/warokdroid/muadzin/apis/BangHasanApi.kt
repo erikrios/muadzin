@@ -27,6 +27,5 @@ object BangHasanApi {
             .appendPath(date)
             .build()
             .toString()
-
     }
 }

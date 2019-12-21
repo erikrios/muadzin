@@ -5,7 +5,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.FrameLayout
 import android.widget.ProgressBar
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +12,6 @@ import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
-import com.warokdroid.muadzin.NextPrayerTimesFragment
 import com.warokdroid.muadzin.R
 import com.warokdroid.muadzin.adapters.CityAdapter
 import com.warokdroid.muadzin.apis.ApiRepository

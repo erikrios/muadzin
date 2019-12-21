@@ -8,9 +8,9 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
-import com.warokdroid.muadzin.NextPrayerTimesFragment
 import com.warokdroid.muadzin.R
 import com.warokdroid.muadzin.apis.ApiRepository
+import com.warokdroid.muadzin.fragments.NextPrayerTimesFragment
 import com.warokdroid.muadzin.models.City
 import com.warokdroid.muadzin.models.DataPrayerTime
 import com.warokdroid.muadzin.presenters.PrayerTimeMainPresenter
@@ -39,6 +39,11 @@ class PrayerTimesDetailsActivity : AppCompatActivity(), PrayerTimeMainView {
     private lateinit var tvNextDateSeven: TextView
     private lateinit var progressBar: ProgressBar
     private lateinit var frameLayoutItemOne: FrameLayout
+    private lateinit var frameLayoutItemTwo: FrameLayout
+    private lateinit var frameLayoutItemThree: FrameLayout
+    private lateinit var frameLayoutItemFour: FrameLayout
+    private lateinit var frameLayoutItemFive: FrameLayout
+    private lateinit var frameLayoutItemSix: FrameLayout
 
     private var prayerTime: DataPrayerTime = DataPrayerTime(null, null)
     private lateinit var city: City
@@ -105,10 +110,27 @@ class PrayerTimesDetailsActivity : AppCompatActivity(), PrayerTimeMainView {
         progressBar = findViewById(R.id.progress_bar)
         frameLayoutItemOne = findViewById(R.id.fl_item_one)
         frameLayoutItemOne.setOnClickListener {
-            val fragmentManager = supportFragmentManager
-            val dialogFragment = NextPrayerTimesFragment()
-            dialogFragment.show(fragmentManager, null)
-
+            showFragmentDialog(nextDateTwo)
+        }
+        frameLayoutItemTwo = findViewById(R.id.fl_item_two)
+        frameLayoutItemTwo.setOnClickListener {
+            showFragmentDialog(nextDateThree)
+        }
+        frameLayoutItemThree = findViewById(R.id.fl_item_three)
+        frameLayoutItemThree.setOnClickListener {
+            showFragmentDialog(nextDateFour)
+        }
+        frameLayoutItemFour = findViewById(R.id.fl_item_four)
+        frameLayoutItemFour.setOnClickListener {
+            showFragmentDialog(nextDateFive)
+        }
+        frameLayoutItemFive = findViewById(R.id.fl_item_five)
+        frameLayoutItemFive.setOnClickListener {
+            showFragmentDialog(nextDateSix)
+        }
+        frameLayoutItemSix = findViewById(R.id.fl_item_six)
+        frameLayoutItemSix.setOnClickListener {
+            showFragmentDialog(nextDateSeven)
         }
     }
 
@@ -161,5 +183,17 @@ class PrayerTimesDetailsActivity : AppCompatActivity(), PrayerTimeMainView {
         calendar.add(Calendar.DAY_OF_YEAR, 1)
         nextDateSeven = simpleDateFormat.format(calendar.time)
 
+    }
+
+    private fun showFragmentDialog(nextDate: String) {
+        val bundle = Bundle()
+        bundle.putString(NextPrayerTimesFragment.DATA_CITY_ID_KEY, city.id)
+        bundle.putString(NextPrayerTimesFragment.DATA_NEXT_DATE_KEY, nextDate)
+        val dialogFragment =
+            NextPrayerTimesFragment()
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        dialogFragment.arguments = bundle
+        dialogFragment.show(fragmentTransaction, null)
     }
 }
