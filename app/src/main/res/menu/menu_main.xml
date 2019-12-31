@@ -7,4 +7,9 @@
         android:title="@string/city_search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/item_about_developers"
+        android:icon="@drawable/ic_account_circle_white_24dp"
+        android:title="@string/about_developers"
+        app:showAsAction="always" />
 </menu>

@@ -1,5 +1,6 @@
 package com.warokdroid.muadzin.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -57,6 +58,14 @@ class MainActivity : AppCompatActivity(), CityMainView {
             }
         })
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if (item?.itemId == R.id.item_about_developers) {
+            val aboutDevelopersIntent = Intent(this, BiodataActivity::class.java)
+            startActivity(aboutDevelopersIntent)
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun initViews() {

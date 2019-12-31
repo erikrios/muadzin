@@ -14,6 +14,17 @@
     <string name="imsak">Imsak</string>
     <string name="city_name_title">Jadwal Sholat %s</string>
     <string name="my_name">Erik Rio Setiawan</string>
-    <string name="my_quotes">\"The Quieter you become,\nthe more you are able to hear\"</string>
+    <string name="my_quotes">\"The quieter you become,\nthe more you are able to hear\"</string>
     <string name="passion">Passion</string>
+    <string name="nature">Nature</string>
+    <string name="android_development">Android Development</string>
+    <string name="ui_ux_design">UI/UX Design</string>
+    <string name="gnu_linux">GNU/Linux</string>
+    <string name="version_control_system">Version Control System</string>
+    <string name="database">Database</string>
+    <string name="open_source">Open Source</string>
+    <string name="facebook">Facebook</string>
+    <string name="github">Github</string>
+    <string name="instagram">Instagram</string>
+    <string name="about_developers">About Developers</string>
 </resources>
